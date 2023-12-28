@@ -29,6 +29,18 @@ config.services = [['appium', {
   logPath: './logs/'
 }]];
 
+config.reporters = ['spec',
+  ['allure', {
+    outputDir: 'allure-results',
+    disableWebdriverStepsReporting: true, //false,
+    disableWebdriverScreenshotsReporting: true, //false,
+  }],
+  // [video, {
+  //   saveAllVideos: false,       // If true, also saves videos for successful test cases
+  //   videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
+  // }]
+];
+
 config.mochaOpts = {
   ui: 'bdd',
   timeout: 240000 //60000
