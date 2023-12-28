@@ -1,12 +1,12 @@
 const config = require('./wdio.shared.conf');
 const path = require('path');
+const allure = require('allure-commandline');
 
 // Runner Configuration
 // config.port = 4723; // >>> moved below to config.services
 
 // Specify Test Files
 config.specs = [
-  // '../test-0/specs/ios/ios.sample.js'
   path.join(process.cwd(),'test-0/specs/ios/ios.sample.js')
 ];
 
@@ -26,14 +26,14 @@ config.services = [['appium', {
     address: 'localhost',
     port: 4723,
   },
-  logPath: './logs/'
+  logPath: './_logs/'
 }]];
 
 config.reporters = ['spec',
   ['allure', {
-    outputDir: 'allure-results',
-    disableWebdriverStepsReporting: true, //false,
-    disableWebdriverScreenshotsReporting: true, //false,
+    outputDir: '_allure-results', // 'allure-results'
+    disableWebdriverStepsReporting: false, //true,
+    disableWebdriverScreenshotsReporting: false //true
   }],
   // [video, {
   //   saveAllVideos: false,       // If true, also saves videos for successful test cases
@@ -43,7 +43,32 @@ config.reporters = ['spec',
 
 config.mochaOpts = {
   ui: 'bdd',
-  timeout: 240000 //60000
+  timeout: 240000
+};
+
+config.afterTest = async function(test, context, { error /*, result, duration, passed, retries*/}) {
+  if (error) {
+    // await driver.takeScreenshot();
+    const testNum = test.title.slice(0, test.title.indexOf(':'));
+    await driver.saveScreenshot('.view-shots/screenFailure_' + testNum + '.png');
+  }
+};
+
+config.onComplete = function(/*exitCode, config, capabilities, results*/) {
+  const reportError = new Error('Could not generate Allure report')
+  const generation = allure(['generate', '_allure-results', '--clean', '-o', '_allure-report'])
+  return new Promise((resolve, reject) => {
+    const generationTimeout = setTimeout(() => reject(reportError), 5000)
+
+    generation.on('exit', function(exitCode) {
+      clearTimeout(generationTimeout)
+      if (exitCode !== 0) {
+        return reject(reportError)
+      }
+      console.log('Allure report successfully generated')
+      resolve()
+    })
+  })
 };
 
 exports.config = config;

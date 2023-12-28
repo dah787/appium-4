@@ -1,10 +1,10 @@
 _allure-report
 _allure-results
+_logs
 _results_
 
 .env
 .DS_Store
 .view-shots
 
-logs
 node_modules

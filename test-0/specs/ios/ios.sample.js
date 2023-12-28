@@ -4,7 +4,11 @@
 describe('iOS tests', () => {
   // WithoutBabelScreen.
   // BabelScreen.
-  it.only('Find element by predicate string', async () => {
+  it.only('ios-tc-001p: Find element by predicate string', async () => {
+
+              // Ошибка для теста
+              await $('aaa').click();
+
     // const alertText = 'name == "Alert Views"';
     const alertText = 'value BEGINSWITH[c] "alert"';
     await $(`-ios predicate string:${alertText}`).click();
