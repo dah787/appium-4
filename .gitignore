@@ -1,6 +1,8 @@
+.env
+.DS_Store
 logs
 node_modules
-.env
 _results_
+_view_shots
 allure-report
 allure-results

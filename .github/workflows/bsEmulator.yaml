@@ -1,11 +1,11 @@
-name: Android app tests in BrowserStack
+name: Tests in BrowserStack
 on: [push, pull_request]
 jobs:
   Tests-in-BrowserStack:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Pull the project into the runner
+        - name: Pull into the runner
           uses: actions/checkout@v4
         - uses: actions/setup-node@v3
           with:
@@ -29,6 +29,6 @@ jobs:
         - name: Upload reports
           uses: actions/upload-artifact@v3
           with:
-            name: Test-Reports
+            name: Test reports
             path: _view_shots
           if: always()        

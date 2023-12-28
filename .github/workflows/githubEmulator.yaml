@@ -1,15 +1,15 @@
-name: Android app tests in Github emulator
+name: Tests in Github
 on: [push, pull_request]
 jobs:
   Tests-in-Github-emulator:
     runs-on: macos-latest
 
     steps:
-        - name: Pull the project into the runner
+        - name: Pull into the runner
           uses: actions/checkout@v3
         - uses: actions/setup-node@v3
           with:
-            node-version: 16.20.1
+            node-version: 16
         
         - name: Install
           run:
@@ -20,6 +20,9 @@ jobs:
             npx appium driver install uiautomator2
 
         - name: Run tests
+          env:
+            BS_USER: ${{ secrets.BS_USER }} #1/3
+            BS_KEY: ${{ secrets.BS_KEY }}   #2/3
           uses: reactivecircus/android-emulator-runner@v2
           with:
             api-level: 29
@@ -27,12 +30,12 @@ jobs:
             #target: google_apis
             #arch: x86_64
             #profile: Nexus 6
-            script: npx wdio config/wdio.android.conf.js
+            #script: npx wdio config/wdio.android.conf.js
+            script: npx wdio config/wdio.android.bs.conf.js #3/3
         
         - name: Upload reports
           uses: actions/upload-artifact@v3
           with:
-            name: Test-Reports
+            name: Test reports
             path: _view_shots
-          if: always()
-        
+          if: always()        

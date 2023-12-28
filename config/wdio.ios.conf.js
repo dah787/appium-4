@@ -26,7 +26,7 @@ config.services = [['appium', {
     address: 'localhost',
     port: 4723,
   },
-  logPath: './'
+  logPath: './logs/'
 }]];
 
 config.mochaOpts = {
