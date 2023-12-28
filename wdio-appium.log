@@ -1,0 +1,218 @@
+[38;5;0m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/session[39m
+[38;5;0m[HTTP][0m [90m{"capabilities":{"alwaysMatch":{"appium:platformName":"Android","appium:platformVersion":"14","appium:deviceName":"Pixel 7 api 34","appium:automationName":"UiAutomator2","appium:app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","appium:autoGrantPermissions":true},"firstMatch":[{}]},"desiredCapabilities":{"appium:platformName":"Android","appium:platformVersion":"14","appium:deviceName":"Pixel 7 api 34","appium:automationName":"UiAutomator2","appium:app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","appium:autoGrantPermissions":true}}[39m
+[38;5;16m[AppiumDriver@ac37][0m Calling AppiumDriver.createSession() with args: [{"appium:platformName":"Android","appium:platformVersion":"14","appium:deviceName":"Pixel 7 api 34","appium:automationName":"UiAutomator2","appium:app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","appium:autoGrantPermissions":true},null,{"alwaysMatch":{"appium:platformName":"Android","appium:platformVersion":"14","appium:deviceName":"Pixel 7 api 34","appium:automationName":"UiAutomator2","appium:app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","appium:autoGrantPermissions":true},"firstMatch":[{}]}]
+[38;5;16m[AppiumDriver@ac37][0m Event 'newSessionRequested' logged at 1703745775275 (11:42:55 GMT+0500 (Uzbekistan Standard Time))
+[38;5;32m[BaseDriver][0m The capabilities ["platformName"] are standard capabilities and do not require "appium:" prefix
+[35m[Appium][39m Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'Android'
+[35m[Appium][39m The 'uiautomator2' driver was installed and matched caps.
+[35m[Appium][39m Will require it at /Users/user/.appium/node_modules/appium-uiautomator2-driver
+[35m[Appium][39m Requiring driver at /Users/user/.appium/node_modules/appium-uiautomator2-driver/build/index.js
+[38;5;16m[AppiumDriver@ac37][0m Appium v2.3.0 creating new AndroidUiautomator2Driver (v2.36.0) session
+[38;5;16m[AppiumDriver@ac37][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;16m[AppiumDriver@ac37][0m Appium's BaseDriver version is 9.4.4
+[38;5;16m[AppiumDriver@ac37][0m AndroidUiautomator2Driver's BaseDriver version is 9.4.4
+[38;5;48m[AndroidUiautomator2Driver@f796][0m Creating session with W3C capabilities: {
+[38;5;48m[AndroidUiautomator2Driver@f796][0m   "alwaysMatch": {
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "platformName": "Android",
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "appium:platformVersion": "14",
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "appium:deviceName": "Pixel 7 api 34",
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "appium:automationName": "UiAutomator2",
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "appium:app": "/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk",
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     "appium:autoGrantPermissions": true
+[38;5;48m[AndroidUiautomator2Driver@f796][0m   },
+[38;5;48m[AndroidUiautomator2Driver@f796][0m   "firstMatch": [
+[38;5;48m[AndroidUiautomator2Driver@f796][0m     {}
+[38;5;48m[AndroidUiautomator2Driver@f796][0m   ]
+[38;5;48m[AndroidUiautomator2Driver@f796][0m }
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Session created with session id: 765ea76a-d683-48af-a89e-aa462392935d
+[38;5;32m[BaseDriver][0m Using local app '/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Checking whether app is actually present
+[38;5;64m[ADB][0m Found 1 'build-tools' folders under '/Users/user/Library/Android/sdk' (newest first):
+[38;5;64m[ADB][0m     /Users/user/Library/Android/sdk/build-tools/34.0.0
+[38;5;64m[ADB][0m Using 'adb' from '/Users/user/Library/Android/sdk/platform-tools/adb'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+[38;5;80m[AndroidDriver][0m Retrieving device list
+[38;5;64m[ADB][0m Trying to find connected Android devices
+[38;5;64m[ADB][0m Getting connected devices
+[38;5;64m[ADB][0m Connected devices: [{"udid":"emulator-5554","state":"device"},{"udid":"emulator-5556","state":"device"}]
+[38;5;80m[AndroidDriver][0m Looking for a device with Android '14.0.0'
+[38;5;64m[ADB][0m Setting device id to emulator-5554
+[38;5;64m[ADB][0m Getting device platform version
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+[38;5;64m[ADB][0m Current device property 'ro.build.version.release': 14
+[38;5;80m[AndroidDriver][0m Using device: emulator-5554
+[38;5;64m[ADB][0m Using 'adb' from '/Users/user/Library/Android/sdk/platform-tools/adb'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 start-server'
+[38;5;64m[ADB][0m Setting device id to emulator-5554
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.sdk'
+[38;5;64m[ADB][0m Current device property 'ro.build.version.sdk': 34
+[38;5;64m[ADB][0m Getting device platform version
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell getprop ro.build.version.release'
+[38;5;64m[ADB][0m Current device property 'ro.build.version.release': 14
+[38;5;64m[ADB][0m Device API level: 34
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Relaxing hidden api policy
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'settings put global hidden_api_policy_pre_p_apps 1;settings put global hidden_api_policy_p_apps 1;settings put global hidden_api_policy 1''
+[38;5;80m[AndroidDriver][0m Parsing package and activity from app manifest
+[38;5;64m[ADB][0m Package name: 'com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Main activity name: 'com.fincube.apexbank.presentation.ui.activity.MainActivity'
+[38;5;80m[AndroidDriver][0m Parsed package and activity are: com.fincube.apexbank.debug/com.fincube.apexbank.presentation.ui.activity.MainActivity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 wait-for-device'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell echo ping'
+[38;5;80m[AndroidDriver][0m Pushing settings apk to device...
+[38;5;64m[ADB][0m Getting package info for 'io.appium.settings'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.settings'
+[38;5;64m[ADB][0m The version name of the installed 'io.appium.settings' is greater or equal to the application version name ('5.2.0' >= '5.2.0')
+[38;5;64m[ADB][0m There is no need to install/upgrade '/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/io.appium.settings/apks/settings_apk-debug.apk'
+[38;5;64m[ADB][0m Getting IDs of all 'io.appium.settings' processes
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f \(\[\[:blank:\]\]\|\^\)io\.appium\.settings\(\[\[:blank:\]\]\|\$\)'
+[38;5;80m[AndroidDriver][0m io.appium.settings is already running. There is no need to reset its permissions.
+[38;5;96m[Logcat][0m Starting logs capture with command: /Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 logcat -v threadtime
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Forwarding UiAutomator2 Server port 6790 to local port 8201
+[38;5;64m[ADB][0m Forwarding system: 8201 to device: 6790
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward tcp:8201 tcp:6790'
+[38;5;64m[ADB][0m Checking app cert for /Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.13.0.apk
+[38;5;64m[ADB][0m Checking app cert for /Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+[38;5;64m[ADB][0m Using 'apksigner.jar' from '/Users/user/Library/Android/sdk/build-tools/34.0.0/lib/apksigner.jar'
+[38;5;64m[ADB][0m Starting apksigner: /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -Xmx1024M -Xss1m -jar /Users/user/Library/Android/sdk/build-tools/34.0.0/lib/apksigner.jar verify --print-certs /Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk
+[38;5;64m[ADB][0m Starting apksigner: /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -Xmx1024M -Xss1m -jar /Users/user/Library/Android/sdk/build-tools/34.0.0/lib/apksigner.jar verify --print-certs /Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.13.0.apk
+[38;5;64m[ADB][0m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[38;5;64m[ADB][0m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[38;5;64m[ADB][0m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[38;5;64m[ADB][0m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[38;5;64m[ADB][0m 
+[38;5;64m[ADB][0m sha256 hash did match for 'appium-uiautomator2-server-debug-androidTest.apk'
+[38;5;64m[ADB][0m '/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk' is signed with the default certificate
+[38;5;64m[ADB][0m Getting install status for io.appium.uiautomator2.server.test
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path io.appium.uiautomator2.server.test'
+[38;5;64m[ADB][0m 'io.appium.uiautomator2.server.test' is installed
+[38;5;64m[ADB][0m apksigner stdout: Signer #1 certificate DN: EMAILADDRESS=android@android.com, CN=Android, OU=Android, O=Android, L=Mountain View, ST=California, C=US
+[38;5;64m[ADB][0m Signer #1 certificate SHA-256 digest: a40da80a59d170caa950cf15c18c454d47a39b26989d8b640ecd745ba71bf5dc
+[38;5;64m[ADB][0m Signer #1 certificate SHA-1 digest: 61ed377e85d386a8dfee6b864bd85b0bfaa5af81
+[38;5;64m[ADB][0m Signer #1 certificate MD5 digest: e89b158e4bcf988ebd09eb83f5378e87
+[38;5;64m[ADB][0m 
+[38;5;64m[ADB][0m sha256 hash did match for 'appium-uiautomator2-server-v5.13.0.apk'
+[38;5;64m[ADB][0m '/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.13.0.apk' is signed with the default certificate
+[38;5;64m[ADB][0m Getting package info for 'io.appium.uiautomator2.server'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package io.appium.uiautomator2.server'
+[38;5;64m[ADB][0m The version name of the installed 'io.appium.uiautomator2.server' is greater or equal to the application version name ('5.13.0' >= '5.13.0')
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Server packages status: [{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.13.0.apk","appId":"io.appium.uiautomator2.server"},{"wasSigned":true,"installState":"sameVersionInstalled","appPath":"/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk","appId":"io.appium.uiautomator2.server.test"}]
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Server packages are not going to be (re)installed
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Waiting up to 30000ms for services to be available
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm list instrumentation'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Instrumentation target 'io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner' is available
+[38;5;64m[ADB][0m Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+[38;5;64m[ADB][0m Got the following command chunks to execute: [["dumpsys","deviceidle","whitelist","+io.appium.settings",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server",";","dumpsys","deviceidle","whitelist","+io.appium.uiautomator2.server.test",";"]]
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys deviceidle whitelist +io.appium.settings ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server ; dumpsys deviceidle whitelist +io.appium.uiautomator2.server.test ;'
+[38;5;64m[ADB][0m Checking app cert for /Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk
+[38;5;64m[ADB][0m Starting apksigner: /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/bin/java -Xmx1024M -Xss1m -jar /Users/user/Library/Android/sdk/build-tools/34.0.0/lib/apksigner.jar verify --print-certs /Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk
+[38;5;64m[ADB][0m apksigner stdout: Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+[38;5;64m[ADB][0m Signer #1 certificate SHA-256 digest: c5fbeec45757656ade7b09e5ea6d0e3751ec5ac1b1e06e93764e1445f939b7d2
+[38;5;64m[ADB][0m Signer #1 certificate SHA-1 digest: 6f07f1259e356a0d787dc6ff6b247ec7f261a6a3
+[38;5;64m[ADB][0m Signer #1 certificate MD5 digest: 53148fe9451a3e5b8c633875d7b0f349
+[38;5;64m[ADB][0m 
+[38;5;64m[ADB][0m '/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk' is signed with a non-default certificate
+[38;5;64m[ADB][0m Getting package info for 'com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m The version name of the installed 'com.fincube.apexbank.debug' is greater or equal to the application version name ('1.0.74' >= '1.0.74')
+[38;5;64m[ADB][0m There is no need to install/upgrade '/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk'
+[38;5;80m[AndroidDriver][0m Performing fast reset on 'com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Getting install status for com.fincube.apexbank.debug
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm path com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m 'com.fincube.apexbank.debug' is installed
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm clear com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys package com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Retrieving requested permissions
+[38;5;64m[ADB][0m Retrieved 15 permissions from requested group
+[38;5;64m[ADB][0m Retrieving granted permissions
+[38;5;64m[ADB][0m Retrieved 10 permissions from install,runtime groups
+[38;5;64m[ADB][0m Granting permissions ["android.permission.POST_NOTIFICATIONS","android.permission.CAMERA","android.permission.ACCESS_COARSE_LOCATION","android.permission.ACCESS_FINE_LOCATION","android.permission.READ_CONTACTS"] to 'com.fincube.apexbank.debug'
+[38;5;64m[ADB][0m Got the following command chunks to execute: [["pm","grant","com.fincube.apexbank.debug","android.permission.POST_NOTIFICATIONS",";","pm","grant","com.fincube.apexbank.debug","android.permission.CAMERA",";","pm","grant","com.fincube.apexbank.debug","android.permission.ACCESS_COARSE_LOCATION",";","pm","grant","com.fincube.apexbank.debug","android.permission.ACCESS_FINE_LOCATION",";","pm","grant","com.fincube.apexbank.debug","android.permission.READ_CONTACTS",";"]]
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pm grant com.fincube.apexbank.debug android.permission.POST_NOTIFICATIONS ; pm grant com.fincube.apexbank.debug android.permission.CAMERA ; pm grant com.fincube.apexbank.debug android.permission.ACCESS_COARSE_LOCATION ; pm grant com.fincube.apexbank.debug android.permission.ACCESS_FINE_LOCATION ; pm grant com.fincube.apexbank.debug android.permission.READ_CONTACTS ;'
+[38;5;80m[AndroidDriver][0m Performed fast reset on the installed 'com.fincube.apexbank.debug' application (stop and clear)
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Performing shallow cleanup of automation leftovers
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m The following obsolete sessions are still running: ["9c66c8c2-af08-4a13-a418-ea450f1c3894"]
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Cleaning up 1 obsolete session
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop io.appium.uiautomator2.server.test'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Starting UIAutomator2 server 5.13.0
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Using UIAutomator2 server from '/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-v5.13.0.apk' and test from '/Users/user/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-uiautomator2-server/apks/appium-uiautomator2-server-debug-androidTest.apk'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Waiting up to 30000ms for UiAutomator2 to be online...
+[38;5;64m[ADB][0m Creating ADB subprocess with args: ["-P","5037","-s","emulator-5554","shell","am","instrument","-w","-e","disableAnalytics","true","io.appium.uiautomator2.server.test/androidx.test.runner.AndroidJUnitRunner"]
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/status' to command name 'getStatus'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m socket hang up
+[38;5;112m[Instrumentation][0m io.appium.uiautomator2.server.test.AppiumUiAutomator2Server:
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/status' to command name 'getStatus'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m socket hang up
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/status' to command name 'getStatus'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /status] to [GET http://127.0.0.1:8201/status] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"None","value":{"message":"UiAutomator2 Server is ready to accept commands","ready":true}}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m The initialization of the instrumentation process took 2083ms
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/session' to command name 'createSession'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [POST /session] to [POST http://127.0.0.1:8201/session] with body: {"capabilities":{"firstMatch":[{"platformName":"Android","platformVersion":"14","deviceName":"emulator-5554","automationName":"UiAutomator2","app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","autoGrantPermissions":true,"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","platformVersion":"14","deviceName":"Pixel 7 api 34","automationName":"UiAutomator2","app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","autoGrantPermissions":true},"deviceUDID":"emulator-5554","appPackage":"com.fincube.apexbank.debug"}],"alwaysMatch":{}}}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8","value":{"capabilities":{"firstMatch":[{"platformName":"Android","platformVersion":"14","deviceName":"emulator-5554","automationName":"UiAutomator2","app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","autoGrantPermissions":true,"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"platformName":"Android","platformVersion":"14","deviceName":"Pixel 7 api 34","automationName":"UiAutomator2","app":"/Users/user/Documents/aTest/app/android/Apexbank-1.0.74-debug.apk","autoGrantPermissions":true},"deviceUDID":"emulator-5554","appPackage":"com.fincube.apexbank.debug"}],"alwaysMatch":{}},"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8"}}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Determined the downstream protocol as 'W3C'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /appium/device/pixel_ratio] to [GET http://127.0.0.1:8201/session/7eb3c80f-ce73-4989-9a92-0f8a0e34eed8/appium/device/pixel_ratio] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/appium/device/system_bars' to command name 'getSystemBars'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /appium/device/system_bars] to [GET http://127.0.0.1:8201/session/7eb3c80f-ce73-4989-9a92-0f8a0e34eed8/appium/device/system_bars] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Matched '/window/current/size' to command name 'getWindowSize'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /window/current/size] to [GET http://127.0.0.1:8201/session/7eb3c80f-ce73-4989-9a92-0f8a0e34eed8/window/current/size] with no body
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Proxying [GET /appium/device/info] to [GET http://127.0.0.1:8201/session/7eb3c80f-ce73-4989-9a92-0f8a0e34eed8/appium/device/info] with no body
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8","value":2.625}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8","value":{"height":2201,"width":1080}}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8","value":{"statusBar":136}}
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Got response with status 200: {"sessionId":"7eb3c80f-ce73-4989-9a92-0f8a0e34eed8","value":{"androidId":"dabee17b3dd53285","apiVersion":"34","bluetooth":{"state":"OFF"},"brand":"google","carrierName":"T-Mobile","displayDensity":420,"locale":"en_US","manufacturer":"Google","model":"sdk_gphone64_arm64","networks":[{"capabilities":{"SSID":null,"linkDownBandwidthKbps":30000,"linkUpstreamBandwidthKbps":12000,"networkCapabilities":"NET_CAPABILITY_NOT_METERED,NET_CAPABILITY_INTERNET,NET_CAPABILITY_NOT_RESTRICTED,NET_CAPABILITY_TRUSTED,NET_CAPABILITY_NOT_VPN,NET_CAPABILITY_VALIDATED,NET_CAPABILITY_NOT_ROAMING,NET_CAPABILITY_FOREGROUND,NET_CAPABILITY_NOT_CONGESTED,NET_CAPABILITY_NOT_SUSPENDED","signalStrength":-50,"transportTypes":"TRANSPORT_WIFI"},"detailedState":"CONNECTED","extraInfo":"","isAvailable":true,"isConnected":true,"isFailover":false,"isRoaming":false,"state":"CONNECTED","subtype":-1,"subtypeName":"","type":1,"typeName":"WIFI"},{"capabilities":{"SSID":null,"linkDownBandwidthKbps":4300,"linkUpstreamBandwidthKbps":1800,"networkCapabil...
+[38;5;80m[AndroidDriver][0m Screen already unlocked, doing nothing
+[38;5;48m[AndroidUiautomator2Driver@f796 (765ea76a)][0m Starting 'com.fincube.apexbank.debug/com.fincube.apexbank.presentation.ui.activity.MainActivity and waiting for 'com.fincube.apexbank.debug/com.fincube.apexbank.presentation.ui.activity.MainActivity'
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am start -W -n com.fincube.apexbank.debug/com.fincube.apexbank.presentation.ui.activity.MainActivity -S -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x10200000'
+[38;5;64m[ADB][0m Waiting up to 20000ms for activity matching pkg: 'com.fincube.apexbank.debug' and activity: 'com.fincube.apexbank.presentation.ui.activity.MainActivity' to be focused
+[38;5;64m[ADB][0m Possible activities, to be checked: 'com.fincube.apexbank.presentation.ui.activity.MainActivity', 'com.fincube.apexbank.debug.com.fincube.apexbank.presentation.ui.activity.MainActivity'
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[38;5;64m[ADB][0m Found package: 'com.google.android.apps.nexuslauncher' and fully qualified activity name : 'com.google.android.apps.nexuslauncher.NexusLauncherActivity'
+[38;5;64m[ADB][0m Incorrect package and activity. Retrying.
+[38;5;64m[ADB][0m Getting focused package and activity
+[38;5;64m[ADB][0m Running '/Users/user/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window displays'
+[35m[Appium][39m Received SIGINT - shutting down
+[38;5;16m[AppiumDriver@ac37][0m There are no active sessions for cleanup
+[38;5;0m[HTTP][0m Waiting until the server is closed
+[38;5;0m[HTTP][0m Received server close event
