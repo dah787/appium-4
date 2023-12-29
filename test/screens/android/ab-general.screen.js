@@ -51,11 +51,18 @@ get button_PhoneNumberInputClear_LogInM(){ // added on 20230719
   return $('//*[@resource-id="com.fincube.apexbank.debug:id/clear_text_image"]');}
 
 
-
+  
 /* FUNCTIONS */
+async makeDir() { // из UApp не запускается: TypeError: UApp.makeDir is not a function
+  const dir = './_screen-shots';
+  const fs = require('fs');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+}
+
 async beforeEach(counter, typeOfTest) {
+  await this.makeDir();
   // * Снимок экрана для контроля
-  await driver.saveScreenshot('_view_shots/screen_before_' + typeOfTest + '-lastTest.png');
+  await driver.saveScreenshot('_screen-shots/screenBefore_' + typeOfTest + '-lastTest.png');
 
   // /*отладка*/ console.log('\n --> counter-beforeEach = ' + counter + '\n');
 // * Пауза для контроля экрана
@@ -71,10 +78,11 @@ async beforeEach(counter, typeOfTest) {
   // return counter;
 }
 async afterEach(counter, tcNum) {    
+  await this.makeDir();
   // * Снимок экрана для контроля
-  // await driver.saveScreenshot('app-screen_afterEach.png');
-  // await driver.saveScreenshot('_view_shots/app-screen-1001p_afterEach_' + (counter + 1) + '.png');
-  await driver.saveScreenshot('_view_shots/screen_after-1_' + tcNum + '.png');
+  // await driver.saveScreenshot('app-screenAfterEach.png');
+  // await driver.saveScreenshot('_screen-shots/app-screen-1001p_afterEach_' + (counter + 1) + '.png');
+  await driver.saveScreenshot('_screen-shots/screenAfter-1_' + tcNum + '.png');
 
   // * Вести счет числу выполненных тестов
   // counter++;
@@ -87,7 +95,7 @@ async afterEach(counter, tcNum) {
   // await this.logOutApp();
 
   // * Снимок экрана для контроля
-  await driver.saveScreenshot('_view_shots/screen_after-2_' + tcNum + '.png');
+  await driver.saveScreenshot('_screen-shots/screenAfter-2_' + tcNum + '.png');
 }
 async after(){
   // * Закрыть приложение
@@ -111,7 +119,7 @@ async logOutApp(){ // appLogOut
     !(await this.button_Language_LogInM.isDisplayed()) &&
     !(await SHome.bottomNav_Home.isDisplayed())
     ) {
-        // /*отладка*/ await driver.saveScreenshot('_view_shots/logOutApp_0_afterCycle_' + (counter + 1) + '.png');
+        // /*отладка*/ await driver.saveScreenshot('_screen-shots/logOutApp_0_afterCycle_' + (counter + 1) + '.png');
         // /*отладка*/ console.log('\n ---> counter = ' + counter + '\n');
         // /*отладка*/ await driver.pause(10000);
       await driver.back();
@@ -122,15 +130,15 @@ async logOutApp(){ // appLogOut
   }
 
   if(await SHome.bottomNav_Home.isDisplayed()) {
-      // /*отладка*/ await driver.saveScreenshot('_view_shots/logOutApp_1_beforeClick_' + 'bottomNav_Home' + '.png');
+      // /*отладка*/ await driver.saveScreenshot('_screen-shots/logOutApp_1_beforeClick_' + 'bottomNav_Home' + '.png');
     await SHome.bottomNav_Home.click();
     await SHome.button_Profile.waitForDisplayed({timeout: this.number_WaitTime_Expected + 5000});
-      // /*отладка*/ await driver.saveScreenshot('_view_shots/logOutApp_2_afterClick_' + 'bottomNav_Home' + '.png');
+      // /*отладка*/ await driver.saveScreenshot('_screen-shots/logOutApp_2_afterClick_' + 'bottomNav_Home' + '.png');
     await SHome.button_Profile.click(); // profileButton
     await this.button_Logout.waitForDisplayed({timeout: this.number_WaitTime_Expected + 5000});
-      // /*отладка*/ await driver.saveScreenshot('_view_shots/logOutApp_3_afterClick_' + 'profileButton' + '.png');
+      // /*отладка*/ await driver.saveScreenshot('_screen-shots/logOutApp_3_afterClick_' + 'profileButton' + '.png');
     await this.button_Logout.click();
-      // /*отладка*/ await driver.saveScreenshot('_view_shots/logOutApp_4_afterClick_' + 'logOut_Item' + '.png');
+      // /*отладка*/ await driver.saveScreenshot('_screen-shots/logOutApp_4_afterClick_' + 'logOut_Item' + '.png');
     await this.button_LogOutConfirm.waitForDisplayed({timeout: this.number_WaitTime_Expected + 5000});
     await this.button_LogOutConfirm.click();
   }

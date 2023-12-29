@@ -31,7 +31,7 @@ describe('ab-ts-02p: Testing of operations | Тестирование опера
     }
 
     // // * Снимок экрана для контроля
-    // await driver.saveScreenshot('_view_shots/screen_before_e-lastTest.png');
+    // await driver.saveScreenshot('_screen-shots/screenBefore_e-lastTest.png');
 
     // /*отладка*/ console.log('\n --> counter-beforeEach = ' + counter + '\n');
     // // * Не выполнять этот код для первого теста
@@ -44,9 +44,9 @@ describe('ab-ts-02p: Testing of operations | Тестирование опера
     await SGen.afterEach(counter, tcNum);
 
     // // * Снимок экрана для контроля
-    // // await driver.saveScreenshot('app-screen_afterEach.png');
-    // // await driver.saveScreenshot('_view_shots/app-screen-001p_afterEach_' + (counter + 1) + '.png');
-    // await driver.saveScreenshot('_view_shots/screen_after_' + tcNum + '.png');
+    // // await driver.saveScreenshot('app-screenAfterEach.png');
+    // // await driver.saveScreenshot('_screen-shots/app-screen-001p_afterEach_' + (counter + 1) + '.png');
+    // await driver.saveScreenshot('_screen-shots/screenAfter_' + tcNum + '.png');
 
     // // * Вести счет числу выполненных тестов
     // counter++;

@@ -385,6 +385,7 @@ async separateThousandthsOfNumber(value) { // separateThousandths(value)
   return string;
 }
 
+
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // функции, применимые к разным экранам
 // async smsCodeInput() { // предварительно установить фокус на поле ввода
@@ -410,6 +411,8 @@ async separateThousandthsOfNumber(value) { // separateThousandths(value)
 //   // /*отладка*/ console.log('\n --> input_SmsCode.getText = ' + await SSms.input_SmsCode.getText() + '\n');
 //   // await driver.pause(15000);
 // }
+
+
 async ifEnterYourCodeScreenOpen() { // если открыт экран Введите свой PIN-код
   if(await SPin.titleScreen_EnterPinCode.isDisplayed()){
     await this.appKeyboardTypeIn(SPin.text_PinCode_Expected);
