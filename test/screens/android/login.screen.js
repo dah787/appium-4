@@ -1,4 +1,4 @@
-const GenM  = require('./ab-general.screen'); // General screen Model
+const GenM  = require('./general.screen'); // General screen Model
 
 class LoginScreen {
 

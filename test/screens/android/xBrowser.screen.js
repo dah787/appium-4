@@ -1,4 +1,4 @@
-class ChromeScreen { // related to device tested
+class BrowserScreen { // related to device tested
 
 /* CONSTANTS */
 url_Apexbank_Expected = 'apexbank.uz';
@@ -17,4 +17,4 @@ get urlBar_browser(){
 /* EOF class */
 }
 
-module.exports = new ChromeScreen();
+module.exports = new BrowserScreen();

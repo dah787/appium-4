@@ -1,4 +1,4 @@
-const SGen    = require('../test/screens/android/ab-general.screen'); // screen > General
+const SGen    = require('../test/screens/android/general.screen'); // screen > General
 const config  = require('./wdio.shared.conf');
 const path    = require('path');
 

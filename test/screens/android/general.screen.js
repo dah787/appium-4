@@ -1,6 +1,6 @@
-const SPin  = require('../android/ab-pinCodeEnter.screen');       // screen > Pin code enter
-const SHome = require('../android/ab-home.screen');               // screen > Home
-const SSup  = require("../../screens/android/ab-support.screen"); // screen > Support
+const SPin  = require('./pinCodeEnter.screen');       // screen > Pin code enter
+const SHome = require('./home.screen');               // screen > Home
+const SSup  = require("./support.screen"); // screen > Support
 
 class GeneralScreen {
 

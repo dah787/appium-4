@@ -1,4 +1,4 @@
-const SGen    = require('../test/screens/android/ab-general.screen'); // screen > General
+const SGen    = require('../test/screens/android/general.screen'); // screen > General
 const config  = require('./wdio.shared.conf');
 const path    = require('path');
 
@@ -8,8 +8,8 @@ const path    = require('path');
 // Specify Test Files
 config.specs = [
   // path.join(process.cwd(),'test/specs/android/android.sample.js')
-  // path.join(process.cwd(),'test/specs/android/ab-ts-01p.spec.js')
-  path.join(process.cwd(),'test/specs/android/ab-ts-02p.spec.js')
+  // path.join(process.cwd(),'test/specs/android/ts-01p.spec.js')
+  path.join(process.cwd(),'test/specs/android/ts-02p.spec.js')
 ];
 
 // Capabilities

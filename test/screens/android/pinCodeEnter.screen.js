@@ -1,5 +1,5 @@
-const SGen = require('../../screens/android/ab-general.screen');  // screen > General
-const UApp = require("../../utils/android/ab-app.utils");         // utilities > Application
+const SGen = require('./general.screen');  // screen > General
+const UApp = require("../../utils/android/app.utils");         // utilities > Application
 
 class PinCodeEnterScreen {
 

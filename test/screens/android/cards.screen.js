@@ -1,6 +1,6 @@
-const GenM    = require('./ab-general.screen');                         // General screen Model
-const SHome   = require('../../screens/android/ab-home.screen');        // screen > Home
-const WCardsS = require('../../screens/android/ab-cardsSender.window'); // window > Cards of sender
+const GenM    = require('./general.screen');                         // General screen Model
+const SHome   = require('./home.screen');        // screen > Home
+const WCardsS = require('./cardsSender.window'); // window > Cards of sender
 
 class CardsScreen {
 /* CONSTANTS */

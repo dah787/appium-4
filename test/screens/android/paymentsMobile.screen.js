@@ -1,10 +1,10 @@
-const DCard   = require('../../data/ab-cards.data');                    // data > Cards 
-const SCards  = require('../../screens/android/ab-cards.screen');       // screen > Cards
-const SGen    = require('../../screens/android/ab-general.screen');     // screen > General
-const SPay    = require('../../screens/android/ab-payments.screen');    // screen > Payments
-const UApp    = require("../../utils/android/ab-app.utils");            // utilities > Application
-const UDev    = require("../../utils/android/dt-device.utils");         // utilities > Device
-const WCardsS = require('../../screens/android/ab-cardsSender.window'); // window > Cards of sender
+const DCard   = require('../../data/cards.data');                    // data > Cards 
+const SCards  = require('./cards.screen');       // screen > Cards
+const SGen    = require('./general.screen');     // screen > General
+const SPay    = require('./payments.screen');    // screen > Payments
+const UApp    = require("../../utils/android/app.utils");            // utilities > Application
+const UDev    = require("../../utils/android/xDevice.utils");         // utilities > Device
+const WCardsS = require('./cardsSender.window'); // window > Cards of sender
 
 class PaymentsScreen {
 

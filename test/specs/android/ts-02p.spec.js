@@ -1,23 +1,23 @@
 /* to start run : npx wdio config/wdio.android.conf.js
 - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-const DCard   = require('../../data/ab-cards.data');                        // data > Cards
+const DCard   = require('../../data/cards.data');                        // data > Cards
 
-const SAuth   = require("../../screens/android/ab-authorization.screen");   // screen > Authorization
-const SCards  = require('../../screens/android/ab-cards.screen');           // screen > Cards
-const SGen    = require('../../screens/android/ab-general.screen');         // screen > General
-const SHome   = require('../../screens/android/ab-home.screen');            // screen > Home
-const SPay    = require('../../screens/android/ab-payments.screen');        // screen > Payments
-const SPayM   = require('../../screens/android/ab-paymentsMobile.screen');  // screen > Payments fo Mobile
-const SPin    = require('../../screens/android/ab-pinCodeEnter.screen');    // screen > Pin code enter
-const SSms    = require('../../screens/android/ab-smsCodeEnter.screen');    // screen > Sms code enter
-const STraBe  = require('../../screens/android/ab-transferBetweenCards.screen');//... > Transfer between cards
-const STraTo  = require('../../screens/android/ab-transferToCard.screen');  // screen > Transfer to card
+const SAuth   = require("../../screens/android/authorization.screen");   // screen > Authorization
+const SCards  = require('../../screens/android/cards.screen');           // screen > Cards
+const SGen    = require('../../screens/android/general.screen');         // screen > General
+const SHome   = require('../../screens/android/home.screen');            // screen > Home
+const SPay    = require('../../screens/android/payments.screen');        // screen > Payments
+const SPayM   = require('../../screens/android/paymentsMobile.screen');  // screen > Payments fo Mobile
+const SPin    = require('../../screens/android/pinCodeEnter.screen');    // screen > Pin code enter
+const SSms    = require('../../screens/android/smsCodeEnter.screen');    // screen > Sms code enter
+const STraBe  = require('../../screens/android/transferBetweenCards.screen');//... > Transfer between cards
+const STraTo  = require('../../screens/android/transferToCard.screen');  // screen > Transfer to card
 
-const WCardsR = require('../../screens/android/ab-cardsReciever.window');   // window > Cards of receiver
-const WCardsS = require('../../screens/android/ab-cardsSender.window');     // window > Cards of sender
+const WCardsR = require('../../screens/android/cardsReciever.window');   // window > Cards of receiver
+const WCardsS = require('../../screens/android/cardsSender.window');     // window > Cards of sender
 
-const UApp    = require("../../utils/android/ab-app.utils");                // utilities > Application
-const UDev    = require("../../utils/android/dt-device.utils");             // utilities > Device
+const UApp    = require("../../utils/android/app.utils");                // utilities > Application
+const UDev    = require("../../utils/android/xDevice.utils");             // utilities > Device
 
 describe('ab-ts-02p: Testing of operations | Тестирование операций |вер.20231225| /Тестов 11 (частично 6)/', () => {
   let counter = 0, tcNum = '', i = 0;

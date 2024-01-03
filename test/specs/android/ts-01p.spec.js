@@ -1,22 +1,22 @@
 /* to start run : npx wdio config/wdio.android.conf.js
 - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-const DCard  = require('../../data/ab-cards.data');                       // data > Cards
+const DCard  = require('../../data/cards.data');                       // data > Cards
 
-const SAuth  = require("../../screens/android/ab-authorization.screen");  // screen > Authorization
-const SGen   = require('../../screens/android/ab-general.screen');        // screen > General
-const SHome  = require('../../screens/android/ab-home.screen');           // screen > Home
-const SPin   = require('../../screens/android/ab-pinCodeEnter.screen');   // screen > Pin code enter
-const SProf  = require('../../screens/android/ab-profile.screen');        // screen > Profile
-const SReg   = require("../../screens/android/ab-regisration.screen");    // screen > Registration
-const SSms   = require('../../screens/android/ab-smsCodeEnter.screen');   // screen > Sms code enter
-const SSup   = require("../../screens/android/ab-support.screen");        // screen > Support
+const SAuth = require("../../screens/android/authorization.screen");  // screen > Authorization
+const SGen  = require('../../screens/android/general.screen');        // screen > General
+const SHome = require('../../screens/android/home.screen');           // screen > Home
+const SPin  = require('../../screens/android/pinCodeEnter.screen');   // screen > Pin code enter
+const SProf = require('../../screens/android/profile.screen');        // screen > Profile
+const SReg  = require("../../screens/android/regisration.screen");    // screen > Registration
+const SSms  = require('../../screens/android/smsCodeEnter.screen');   // screen > Sms code enter
+const SSup  = require("../../screens/android/support.screen");        // screen > Support
 
-const SChrom = require("../../screens/android/dt-chrome.screen");         // screen > Chrome app
-const SDial  = require("../../screens/android/dt-dialer.screen");         // screen > Dialer app
-const STlg   = require("../../screens/android/dt-telegram.screen");       // screen > Telegram app
+const SBrow = require("../../screens/android/xBrowser.screen");       // screen > Browser app
+const SDial = require("../../screens/android/xDialer.screen");        // screen > Dialer app
+const STlg  = require("../../screens/android/xTelegram.screen");      // screen > Telegram app
 
-const UApp   = require("../../utils/android/ab-app.utils");               // utilities > App
-const UDev   = require("../../utils/android/dt-device.utils");            // utilities > Device
+const UApp  = require("../../utils/android/app.utils");               // utilities > App
+const UDev  = require("../../utils/android/xDevice.utils");           // utilities > Device
 
 describe('ab-ts-01p: Testing of operations provision | Тестирование обеспечения операций |вер.20231129| /Тестов 11 (частично 4)/', () => {
   let counter = 0, tcNum = '', i = 0;
@@ -749,37 +749,37 @@ it('ab-u-tc-01.006p: ? Additional communication | Дополнительная �
       // /*отладка*/ console.log('\n --> supportContact.includes(LinkedIn) = ' + supportContact + '\n');
       await dataArray[i].click();
       // 2.1.Открыт экран ресурса банка, где отображается соответствующая информация.
-      await SChrom.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
+      await SBrow.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
       // - адрес ресурса
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SChrom.url_LinkedIn_Expected);
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SBrow.url_LinkedIn_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
 
     } else if(supportContact.includes(SGen.text_Instagram_En_Expected)){
       // /*отладка*/ console.log('\n --> supportContact.includes(Instagram) = ' + supportContact + '\n');
       await dataArray[i].click();
       // 2.1.Открыт экран ресурса банка, где отображается соответствующая информация.
-      await SChrom.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
+      await SBrow.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
       // - адрес ресурса
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SChrom.url_Instagram_Expected);
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SBrow.url_Instagram_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
 
     } else if(supportContact.includes(SGen.text_Facebook_En_Expected)){
       // /*отладка*/ console.log('\n --> supportContact.includes(Facebook) = ' + supportContact + '\n');
       await dataArray[i].click();
       // 2.1.Открыт экран ресурса банка, где отображается соответствующая информация.
-      await SChrom.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
+      await SBrow.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
       // - адрес ресурса
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SChrom.url_Facebook_Expected);
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SBrow.url_Facebook_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
 
     } else if(supportContact.includes(SGen.text_WebSite_En_Expected)){
       // /*отладка*/ console.log('\n --> supportContact.includes(WebSite) = ' + supportContact + '\n');
       await dataArray[i].click();
       // 2.1.Открыт экран ресурса банка, где отображается соответствующая информация.
-      await SChrom.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
+      await SBrow.urlBar_browser.waitForDisplayed({timeout: SGen.number_WaitTime_Expected + 10000});
       // - адрес ресурса
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SChrom.url_Apexbank_Expected);
-      await expect(await SChrom.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SBrow.url_Apexbank_Expected);
+      await expect(await SBrow.urlBar_browser.getText()).toContain(SGen.text_Apexbank_En_Expected);
 
     } else {
       // /*отладка*/ console.log('\n --> в supportContact нет искомого содержимого: ' + supportContact + '\n');

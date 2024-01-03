@@ -1,4 +1,4 @@
-const SPin  = require('../../screens/android/ab-pinCodeEnter.screen');  // screen > Pin code enter
+const SPin  = require('../../screens/android/pinCodeEnter.screen');  // screen > Pin code enter
 
 class AppUtilities {
 

@@ -2,14 +2,14 @@
 // const UDev  = require("../../utils/android/dt-device.utils");          // Android Utilities Model
 
 // const HomeM  = require('../../screens/android/ab-home.screen');         // screen > Home
-const SHome  = require('../../screens/android/ab-home.screen');         // screen > Home
-const GenM   = require('../../screens/android/ab-general.screen');      // screen > General
-const LogInM = require('./ab-login.screen');                            // screen > Login
-const SPin   = require('../../screens/android/ab-pinCodeEnter.screen'); // screen > Pin code enter
-const SSms   = require('../../screens/android/ab-smsCodeEnter.screen'); // screen > Sms code enter
+const SHome  = require('./home.screen');         // screen > Home
+const GenM   = require('./general.screen');      // screen > General
+const LogInM = require('./login.screen');                            // screen > Login
+const SPin   = require('./pinCodeEnter.screen'); // screen > Pin code enter
+const SSms   = require('./smsCodeEnter.screen'); // screen > Sms code enter
 
-const UApp   = require("../../utils/android/ab-app.utils");             // utilities > Application
-const UDev   = require("../../utils/android/dt-device.utils");          // utilities > Device
+const UApp   = require("../../utils/android/app.utils");             // utilities > Application
+const UDev   = require("../../utils/android/xDevice.utils");          // utilities > Device
 
 class AuthorizationScreen extends LogInM {
 /* CONSTANTS */
