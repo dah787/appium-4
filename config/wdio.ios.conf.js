@@ -1,4 +1,4 @@
-const SGen    = require('../test/screens/android/ab-general.screen');  // screen > General
+const SGen    = require('../test/screens/android/ab-general.screen'); // screen > General
 const config  = require('./wdio.shared.conf');
 const path    = require('path');
 
@@ -78,13 +78,13 @@ config.afterTest = async function(test, context, { error /*, result, duration, p
 //   })
 // };
 
-videoRoports();
-async function videoRoports() { // все отчеты, кроме Аллюр
+videoReports();
+async function videoReports() { // все отчеты, кроме Аллюр
   const video = require('wdio-video-reporter');
   config.reporters = ['spec',
     [video, { // https://www.npmjs.com/package/wdio-video-reporter
       logLevel: 'silent', // trace | debug | info | warn | error | silent
-      outputDir: '_video-results',  // Default: undefined
+      outputDir: '_screen-video',  // Default: undefined
       saveAllVideos: false,         // false  If true, also saves videos for successful test cases
       videoSlowdownMultiplier: 3,   // 3 - Higher to get slower videos, lower for faster videos [Value 1-100]
       videoRenderTimeout: 9,        // 5 - Max seconds to wait for a video to finish rendering
@@ -96,48 +96,48 @@ async function videoRoports() { // все отчеты, кроме Аллюр
 }
 
 // allureRoports();
-async function allureRoports() { // все отчеты, включая Аллюр
+// async function allureRoports() { // все отчеты, включая Аллюр
 
-  const video = require('wdio-video-reporter');
-  const allure = require('allure-commandline');
+//   const video = require('wdio-video-reporter');
+//   const allure = require('allure-commandline');
 
-  config.reporters = ['spec',
-    ['allure', {
-      outputDir: '_allure-results', // 'allure-results'
-      disableWebdriverStepsReporting: false, //true,
-      disableWebdriverScreenshotsReporting: false //true
-    }],
-    [video, { // https://www.npmjs.com/package/wdio-video-reporter
-      logLevel: 'silent', // trace | debug | info | warn | error | silent
-      outputDir: '_video-results',  // Default: undefined
-      saveAllVideos: false,         // false  If true, also saves videos for successful test cases
-      videoSlowdownMultiplier: 3,   // 3 - Higher to get slower videos, lower for faster videos [Value 1-100]
-      videoRenderTimeout: 9,        // 5 - Max seconds to wait for a video to finish rendering
-      videoFormat: 'mp4',           // Default: webm
-      screenshotIntervalSecs: 0.1,  // Default: undefined (minumum 0.5s)
-      // videoScale: '2400:trunc(ow/a/2)*2'  // Default: '1200:trunc(ow/a/2)*2'
-      }]
-  ];
+//   config.reporters = ['spec',
+//     ['allure', {
+//       outputDir: '_allure-results', // 'allure-results'
+//       disableWebdriverStepsReporting: false, //true,
+//       disableWebdriverScreenshotsReporting: false //true
+//     }],
+//     [video, { // https://www.npmjs.com/package/wdio-video-reporter
+//       logLevel: 'silent', // trace | debug | info | warn | error | silent
+//       outputDir: '_video-results',  // Default: undefined
+//       saveAllVideos: false,         // false  If true, also saves videos for successful test cases
+//       videoSlowdownMultiplier: 3,   // 3 - Higher to get slower videos, lower for faster videos [Value 1-100]
+//       videoRenderTimeout: 9,        // 5 - Max seconds to wait for a video to finish rendering
+//       videoFormat: 'mp4',           // Default: webm
+//       screenshotIntervalSecs: 0.1,  // Default: undefined (minumum 0.5s)
+//       // videoScale: '2400:trunc(ow/a/2)*2'  // Default: '1200:trunc(ow/a/2)*2'
+//       }]
+//   ];
 
-  config.onComplete = async function(/*exitCode, config, capabilities, results*/) {
-    const reportError = new Error('Could not generate Allure report')
-    const generation = allure(['generate', '_allure-results', '--clean', '-o', '_allure-report'])
-    return new Promise((resolve, reject) => {
-      const generationTimeout = setTimeout(() => reject(reportError), 5000)
+//   config.onComplete = async function(/*exitCode, config, capabilities, results*/) {
+//     const reportError = new Error('Could not generate Allure report')
+//     const generation = allure(['generate', '_allure-results', '--clean', '-o', '_allure-report'])
+//     return new Promise((resolve, reject) => {
+//       const generationTimeout = setTimeout(() => reject(reportError), 5000)
   
-      generation.on('exit', function(exitCode) {
-        clearTimeout(generationTimeout)
-        if (exitCode !== 0) {
-          return reject(reportError)
-        }
-        console.log('Allure report successfully generated')
-        resolve()
-      })
-    })
-  };
+//       generation.on('exit', function(exitCode) {
+//         clearTimeout(generationTimeout)
+//         if (exitCode !== 0) {
+//           return reject(reportError)
+//         }
+//         console.log('Allure report successfully generated')
+//         resolve()
+//       })
+//     })
+//   };
 
 
-}
+// }
 
 exports.config = config;
 

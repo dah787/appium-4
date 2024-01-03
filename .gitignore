@@ -2,7 +2,7 @@ _allure-report
 _allure-results
 _logs
 _screen-shots
-_video-results
+_screen-video
 
 .env
 .DS_Store
