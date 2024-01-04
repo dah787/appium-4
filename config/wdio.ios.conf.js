@@ -1,22 +1,26 @@
-const SGen    = require('../test/screens/android/general.screen'); // screen > General
-const config  = require('./wdio.shared.conf');
-const path    = require('path');
+// https://stackoverflow.com/questions/38660022/curly-brackets-braces-in-node-js-require-statement
+const config = require('./wdio.shared.conf');
+const path   = require('path');
+const SGen   = require('../test/screens/android/general.screen'); // screen > General
 
 // Runner Configuration
 // config.port = 4723; // >>> moved below to config.services
 
 // Specify Test Files
 config.specs = [
+  // path.join(process.cwd(),'test-0/specs/ios/ios.sample.js')
   path.join(process.cwd(),'test-0/specs/ios/ios.sample.js')
 ];
 
 // Capabilities
 config.capabilities = [{
-  'appium:platformName': 'iOS',
-  'appium:platformVersion': '17.2',
-  'appium:deviceName': 'iPhone 15',
+  'platformName': 'iOS',
+  'appium:platformVersion': '17.2', // '15.5', //
+  'appium:deviceName': 'iPhone 15', // 'iPhone 13', //
   'appium:automationName': 'XCUITest',
   'appium:app': path.join(process.cwd(), 'app/ios/UIKitCatalog.app')
+  // 'appium:app': path.join(process.cwd(), 'app/ios/Apexmobile.app')
+  // 'appium:app': path.join(process.cwd(), 'app/ios/Apexmobile.app.zip')
 }];
 
 // Test runner services < Test Configurations

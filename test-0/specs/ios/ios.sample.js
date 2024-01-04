@@ -64,5 +64,4 @@ describe('iOS tests', () => {
   it('ios-007: Pause', async () => {
     await driver.pause(2000);
   })
-
 })

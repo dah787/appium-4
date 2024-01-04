@@ -1,6 +1,7 @@
-const SGen    = require('../test/screens/android/general.screen'); // screen > General
-const config  = require('./wdio.shared.conf');
-const path    = require('path');
+// https://stackoverflow.com/questions/38660022/curly-brackets-braces-in-node-js-require-statement
+const config = require('./wdio.shared.conf');
+const path   = require('path');
+const SGen   = require('../test/screens/android/general.screen'); // screen > General
 
 // Runner Configuration
 // config.port = 4723; // >>> moved below to config.services
@@ -14,12 +15,12 @@ config.specs = [
 
 // Capabilities
 config.capabilities = [{
-  'appium:platformName': 'Android',
+  'platformName': 'Android',
   'appium:platformVersion': '13',
   'appium:deviceName': 'Pixel 7 api 33',
   'appium:automationName': 'UiAutomator2',
   // 'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk'),
-  'appium:app': path.join(process.cwd(), 'app/android/Apexbank-1.0.74-debug.apk'),
+  'appium:app': path.join(process.cwd(), 'app/android/Apexbank-1.0.78_DEVAN-188-debug.apk'),
   'appium:autoGrantPermissions': true
 }],
 
